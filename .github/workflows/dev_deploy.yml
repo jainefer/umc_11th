@@ -8,7 +8,7 @@ on:
 jobs:
   build:
     # pull 요청이 dev에 merge 되었을 때 아래 steps를 실행
-    if: github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'dev'
+    if: github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'dev' 
     
     runs-on: ubuntu-latest  # 우분투 최신 버전으로 실행
 
@@ -16,7 +16,7 @@ jobs:
       matrix:
         node-version: ['18.x']  # 노드 버전 지정! 여러 개도 가능! ['18.x', '14.x'] 요렇게
         
-    steps:
+    steps: 
       # build 할 코드를 가져옴 (코드 checkout - github에서 제공해주는 checkout@v3 사용)
       - name: Checkout
         uses: actions/checkout@v3   
@@ -40,7 +40,7 @@ jobs:
       - name: Run Build
         run: npm run build # 빌드
 
-      # 배포 패키지 생성
+      # 배포 패키지 생성(중요)
       - name: Generate deployment package
         run: |
           cp -R .platform dist
