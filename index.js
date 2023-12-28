@@ -43,6 +43,6 @@ app.use((err, req, res, next) => {
     res.status(err.data.status || status.INTERNAL_SERVER_ERROR).send(response(err.data));
 });
 
-app.listen(app.get('port'), () => {
-    console.log(`Example app listening on port ${app.get('port')}`);
+app.listen(app.get('PORT'), () => {
+    console.log(`Example app listening on port ${app.get('PORT')}`);
 });
