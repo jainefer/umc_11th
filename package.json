@@ -6,9 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:dev": "nodemon --exec babel-node index.js",
-    "start:dist": "webpack --mode production & node ./dist/main.js",
+    "start:dist": "webpack --mode production & node ./dist/main.js", 
     "start": "node main.js",
-    "build": "webpack --mode production"
+    "build": "webpack"
   },
   "dependencies": {
     "@babel/cli": "^7.23.4",
