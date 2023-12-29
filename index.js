@@ -28,6 +28,7 @@ app.get('/', (req, res, next) => {
     res.send(response(status.SUCCESS, "루트 페이지!"));
 })
 
+
 // error handling
 app.use((req, res, next) => {
     const err = new BaseError(status.NOT_FOUND);
@@ -43,6 +44,6 @@ app.use((err, req, res, next) => {
     res.status(err.data.status || status.INTERNAL_SERVER_ERROR).send(response(err.data));
 });
 
-app.listen(app.get('PORT'), () => {
+app.listen(3000, () => {
     console.log(`Example app listening on port ${app.get('PORT')}`);
 });
