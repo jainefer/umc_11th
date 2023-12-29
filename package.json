@@ -1,5 +1,5 @@
 {
-  "name": "mission8",
+  "name": "umc_cicd",
   "version": "1.0.0",
   "description": "12",
   "main": "index.js",
@@ -8,7 +8,7 @@
     "start:dev": "nodemon --exec babel-node index.js",
     "start:dist": "webpack --mode production & node ./dist/main.js",
     "start": "node main.js",
-    "build": "webpack"
+    "build": "webpack --mode production"
   },
   "dependencies": {
     "@babel/cli": "^7.23.4",
