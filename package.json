@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:dev": "nodemon --exec babel-node index.js",
     "start:dist": "webpack --mode production & node ./dist/main.cjs",
-    "start": "node main.cjs",
+    "start": "node ./dist/main.cjs",
     "build": "webpack --mode production"
   },
   "dependencies": {
