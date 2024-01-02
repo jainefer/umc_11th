@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --exec babel-node index.js"
+    "start:dev": "nodemon --exec babel-node index.js",
+    "start:dist": "webpack --mode production & node ./dist/main.cjs",
+    "start": "nodemon --exec babel-node index.js",
+    "build": "webpack --mode production"
   },
   "dependencies": {
     "@babel/cli": "^7.23.4",
